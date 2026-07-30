@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Name Lookup</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Check Name Status</h2>
+    <form method="POST">
+      <input type="text" name="name" placeholder="Enter name">
+      <button type="submit">Search</button>
+    </form>
+    {% if result %}
+      <p class="result">{{ result }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
